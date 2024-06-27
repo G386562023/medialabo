@@ -1,3 +1,14 @@
 h1 {
     background-color: rgb(154, 154, 229);
 }
+
+div#tenki {
+	display: grid;
+    grid-template-columns: 1fr 1fr;
+	grid-gap: 10px;
+}
+
+div#tenki > div {
+	padding: 5px;
+	background-color: rgb(35, 118, 76, 0.5);
+}
