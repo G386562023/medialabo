@@ -47,3 +47,23 @@ let data = {
 
 ////////// 課題3-2 ここからプログラムを書こう
 console.log("あいうえお");
+console.log(data.coord); 
+console.log(data.weather); 
+console.log(data.base); 
+console.log(data.main);
+console.log(data.visibility);
+console.log(data.wind);
+console.log(data.clouds);
+console.log(data.dt);
+console.log(data.sys);
+console.log(data.timezone);
+console.log(data.id);
+console.log(data.name);
+console.log(data.cod);       
+
+
+let div = document.querySelector("div#result"); 
+
+let listW = document.createElement("li");
+listW.textContent ="天気:" + data.weather.main;//undefind.　weatherまでは見れる。
+div.insertAdjacentElement("beforeend", listW); 

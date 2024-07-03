@@ -9,28 +9,30 @@ let kaisu = 0;
 // 将来以下の hantei(); の4回の呼び出しを全て削除する
 // 代わりにここでは，ボタンを押したら hantei() を呼び出すイベント処理をする
 hantei();
-hantei();
-hantei();
-hantei();
 
 // ボタンを押した後の処理をする関数 hantei() の定義
 function hantei() {
   // 将来ここでは 4 ではなくテキストボックスに指定された数値を yoso に代入する
   let yoso = 4;
   kaisu = kaisu + 1;
-  console.log(kaisu + " 回目の予想: " + yoso); 
+  //console.log(kaisu + " 回目の予想: " + yoso); 
+  let kai = document.querySelector("span#kaisu");
+  kai.textContent = kaisu;
+  let yos = document.querySelector("span#answer");
+  yos.textContent = yoso;
+  let kota = document.querySelector("p#result");
   // 課題3-1: 正解判定する
   // kotae と yoso が一致するかどうか調べて結果を出力
   // 課題3-1における出力先はコンソール  
   if(kotae === yoso && kaisu === 1){
-    console.log("正解です。おめでとう！");
+    kota.textContent = ("正解です。おめでとう！");
   }else if(kotae !== yoso && kaisu === 3){
-    console.log("まちがい、残念でした答えは " + kotae + " です。");
+    kota.textContent = ("まちがい、残念でした答えは " + kotae + " です。");
   }else if(kotae !== yoso && kaisu <= 2 && yoso < kotae){
-    console.log("まちがい、答えはもっと大きいですよ。");
+    kota.textContent = ("まちがい、答えはもっと大きいですよ。");
   }else if(kotae !== yoso && kaisu <= 2 && yoso > kotae){
-    console.log("まちがい、答えはもっと小さいですよ。");
+    kota.textContent = ("まちがい、答えはもっと小さいですよ。");
   }else{
-    console.log("答えは " + kotae + " でした。 すでにゲームは終わっています。");
+    kota.textContent = ("答えは " + kotae + " でした。 すでにゲームは終わっています。");
   } 
 }

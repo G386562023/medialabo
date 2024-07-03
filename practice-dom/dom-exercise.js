@@ -42,7 +42,16 @@ p3.insertAdjacentElement("beforeend", img3);
 div.insertAdjacentElement("beforeend", p3); 
 
 // 練習4-4 箇条書き削除プログラム
-
+let remove = document.querySelectorAll("li"); 
+for (let n of remove){
+	n.remove();
+  } 
 
 // 練習4-5 箇条書き追加プログラム
 
+let ul = document.querySelector("ul#location"); 
+for (let n of data) {
+	let list = document.createElement("li");
+	  list.textContent = n.name + " ... 緯度:" + n.lat + ", 経度:" + n.lng;
+	  ul.insertAdjacentElement("beforeend", list);
+  } 
