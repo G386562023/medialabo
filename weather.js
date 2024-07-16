@@ -3,14 +3,14 @@ let data = {
     "lon": 116.3972,
     "lat": 39.9075
   },
-  "weather": [
+  "weather": 
     {
       "id": 803,
       "main": "Clouds",
       "description": "曇りがち",
       "icon": "04d"
     }
-  ],
+  ,
   "base": "stations",
   "main": {
     "temp": 9.94,
@@ -64,6 +64,9 @@ console.log(data.cod);
 
 let div = document.querySelector("div#result"); 
 
+let listL = document.createElement("li");
+listL.textContent ="場所:" + data.name;
+div.insertAdjacentElement("beforeend", listL); 
 let listW = document.createElement("li");
-listW.textContent ="天気:" + data.weather.main;//undefind.　weatherまでは見れる。
+listW.textContent ="天気:" + data.weather.main;
 div.insertAdjacentElement("beforeend", listW); 
