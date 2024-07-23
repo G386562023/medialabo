@@ -41,3 +41,16 @@ div#kakujyugyo > div {
 	padding: 5px;
 	background-color: #ffefaf;
 }
+
+
+
+
+div#report {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 10px;
+}
+
+div#report > div {
+	padding: 20px;
+}

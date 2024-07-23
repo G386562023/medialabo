@@ -1,5 +1,5 @@
 /*
-let data = {
+let data = {aa
   "coord": {
     "lon": 116.3972,
     "lat": 39.9075
@@ -70,7 +70,7 @@ console.log(data.cod);
 function print(data){
 
   let h3 = document.querySelector('h3');
-  h3.textContent = data.name;
+  h3.textContent = "都市名: " + data.name;
 
   let remove = document.querySelectorAll("li"); 
   for (let n of remove){
